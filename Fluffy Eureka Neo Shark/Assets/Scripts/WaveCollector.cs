@@ -15,7 +15,7 @@ public class WaveCollector : MonoBehaviour
             Vector3 newPos = collision.transform.position;
             newPos.x = waveSpawner.position.x;
             collision.transform.position = newPos;
-            collision.transform.localScale = new Vector3(Random.Range(20f, 40f), Random.Range(20f, 40f), 1);
+            //collision.transform.localScale = new Vector3(Random.Range(20f, 40f), Random.Range(20f, 40f), 1);
         }
     }
 }

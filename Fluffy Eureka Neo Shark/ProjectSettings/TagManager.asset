@@ -8,6 +8,7 @@ TagManager:
   - Seagull
   - Score
   - Wave
+  - bounds
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - BG
   - Collector
   - Waves
-  - 
-  - 
+  - Bounds
+  - Player
   - 
   - 
   - 
