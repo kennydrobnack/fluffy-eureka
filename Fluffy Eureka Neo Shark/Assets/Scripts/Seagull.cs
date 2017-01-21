@@ -9,10 +9,11 @@ public class Seagull : MonoBehaviour {
 
 
 	//If we collide with the player, game over
-	void OnTriggerEnter(Collider other) {
-		if (other.tag.Equals ("Player")) {
+	void OnTriggerEnter2D(Collider2D other) {
+		if (other.gameObject.tag.Equals ("Player")) {
 			SceneManager.LoadScene (0);
 		}
 	}
+
 
 }

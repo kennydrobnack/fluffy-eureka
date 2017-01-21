@@ -23,14 +23,13 @@ GameObject:
   - component: {fileID: 50502908850307340}
   - component: {fileID: 58127434626710024}
   - component: {fileID: 114864256156976584}
-  - component: {fileID: 114093737117071358}
   - component: {fileID: 95147073572512524}
   - component: {fileID: 114570086164265928}
   - component: {fileID: 114054350003453334}
   - component: {fileID: 114554889644623844}
   m_Layer: 0
   m_Name: Fish
-  m_TagString: Seagull
+  m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,18 +109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d4806c1941e4c24787c870d251032b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114093737117071358
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1812392300600160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96f0da6defad21e449f52f77b58b6889, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value: 1
+  flipX: 1
+  flipY: 1
 --- !u!114 &114554889644623844
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -189,7 +178,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300010, guid: 7e11d67ca68a25f4f8e9490443aa911d, type: 3}
+  m_Sprite: {fileID: 21300036, guid: 494fcb50f4a8f5a45aec7eefadecb381, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

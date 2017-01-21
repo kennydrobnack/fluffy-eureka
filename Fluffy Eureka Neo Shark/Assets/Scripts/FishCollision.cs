@@ -6,12 +6,14 @@ public class FishCollision : MonoBehaviour {
 
 	public int value = 1;
 
-	void OnTriggerEnter(Collider other) {
-		if (other.tag.Equals ("Player")) {
+	void OnTriggerEnter2D(Collider2D other) {
+		if (other.gameObject.tag.Equals ("Fish")) {
 			IncreaseScore ();
-			Destroy (gameObject);
+			Destroy (other.gameObject);
 		}
 	}
+
+
 
 	private void IncreaseScore(){
 		GameObject score = GameObject.FindGameObjectWithTag ("Score");
