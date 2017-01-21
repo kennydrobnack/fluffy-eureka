@@ -26,14 +26,4 @@ public class Seagull : MonoBehaviour {
 			sprite.flipX = true;
 	}
 
-	//Check to see if we're outside of the camera + margin
-	void Update() {
-		Camera camera = Camera.main;
-		float width = camera.orthographicSize+margin;
-		float height = camera.aspect * width+margin;
-		Rect bounds = new Rect (camera.transform.position.x-.5f*width, camera.transform.position.y-.5f*height, width, height);
-		if (!bounds.Contains (transform.position)) {
-			Destroy (gameObject);
-		}
-	}
 }
