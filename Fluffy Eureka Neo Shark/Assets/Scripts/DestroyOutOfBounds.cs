@@ -11,7 +11,6 @@ public class DestroyOutOfBounds : MonoBehaviour {
 		float height = 2f*camera.orthographicSize;
 		float width = camera.aspect * height;
 		Rect bounds = new Rect (camera.transform.position.x-.5f*(width+margin), camera.transform.position.y-.5f*(height+margin), width+margin, height+margin);
-		Debug.Log (bounds);
 		if (!bounds.Contains (transform.position)) {
 			Destroy (gameObject);
 		}
