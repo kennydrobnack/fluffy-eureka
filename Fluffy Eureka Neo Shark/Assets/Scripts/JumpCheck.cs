@@ -7,7 +7,7 @@ public class JumpCheck : MonoBehaviour {
 	Animator anim;
 
 	void Start() {
-		anim = GetComponent<Animator> ();	
+		anim = GameObject.FindGameObjectWithTag("Cat").GetComponent<Animator> ();	
 	}
 
 	void OnCollisionEnter2D(Collision2D other) {

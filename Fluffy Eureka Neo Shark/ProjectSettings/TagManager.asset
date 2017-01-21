@@ -9,6 +9,8 @@ TagManager:
   - Score
   - Wave
   - Fish
+  - Cat
+  - Shark
   layers:
   - Default
   - TransparentFX

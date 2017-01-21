@@ -8,7 +8,7 @@ public class TestJump : MonoBehaviour {
 	private Animator anim;
 
 	void Start() {
-		anim = GetComponent<Animator> ();
+		anim = GameObject.FindGameObjectWithTag("Cat").GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame

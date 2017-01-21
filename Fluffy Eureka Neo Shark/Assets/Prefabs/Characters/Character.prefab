@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212382411785601842}
   m_Layer: 0
   m_Name: Shark
-  m_TagString: Untagged
+  m_TagString: Shark
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 212782630081954988}
   m_Layer: 0
   m_Name: Cat
-  m_TagString: Untagged
+  m_TagString: Cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,7 +51,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4209251639418372}
-  - component: {fileID: 95744287599282170}
   - component: {fileID: 50092179475225780}
   - component: {fileID: 114067520669718506}
   - component: {fileID: 114241583165631888}
@@ -148,23 +147,6 @@ PolygonCollider2D:
       - {x: 1.1168058, y: -0.8363653}
       - {x: 0.5784893, y: -1.4876087}
       - {x: -0.040070176, y: -1.1411245}
---- !u!95 &95744287599282170
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1832412272247942}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 109874518fa36b74eaa2020444a55969, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114067520669718506
 MonoBehaviour:
   m_ObjectHideFlags: 1
