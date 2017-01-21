@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 212318481662050894}
   - component: {fileID: 50417729665712492}
   - component: {fileID: 58256268666765582}
-  - component: {fileID: 114431883107148938}
   - component: {fileID: 114111174675810458}
+  - component: {fileID: 114431883107148938}
   m_Layer: 0
   m_Name: Seagull
   m_TagString: Seagull
@@ -89,6 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c180c638270ffa459482e958759db47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  margin: 2
 --- !u!114 &114431883107148938
 MonoBehaviour:
   m_ObjectHideFlags: 1

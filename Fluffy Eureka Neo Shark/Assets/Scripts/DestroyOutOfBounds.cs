@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DestroyOutOfBounds : MonoBehaviour {
 
-	float margin = 2f;
+	public float margin = 2f;
 
 	void Update() {
 		Camera camera = Camera.main;
