@@ -24,7 +24,7 @@ public class FishSpawner : MonoBehaviour {
         Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
         Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
         GameObject aFish = (GameObject)Instantiate(Fish);
-        aFish.transform.position = new Vector2(Random.Range(min.x, max.x), max.y);
+        aFish.transform.position = new Vector2(Random.Range(min.x, max.x), min.y);
 
         ScheduleNextFishSpawn();
     }
