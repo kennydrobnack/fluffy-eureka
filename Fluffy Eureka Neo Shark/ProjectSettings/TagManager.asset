@@ -8,6 +8,7 @@ TagManager:
   - Seagull
   - Score
   - Spawners
+  - Wave
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - 
   - BG
   - Collector
-  - 
+  - Waves
   - 
   - 
   - 
@@ -42,9 +43,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 1682658997
+    locked: 0
+  - name: Wave
+    uniqueID: 3597809449
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Background
-    uniqueID: 1682658997
+  - name: Player
+    uniqueID: 1944006419
     locked: 0
