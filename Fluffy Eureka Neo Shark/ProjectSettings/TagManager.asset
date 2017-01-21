@@ -7,11 +7,8 @@ TagManager:
   - Background
   - Seagull
   - Score
-  - Spawners
   - Wave
-  - Fish
-  - Cat
-  - Shark
+  - bounds
   layers:
   - Default
   - TransparentFX
@@ -24,8 +21,8 @@ TagManager:
   - BG
   - Collector
   - Waves
-  - 
-  - 
+  - Bounds
+  - Player
   - 
   - 
   - 
