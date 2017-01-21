@@ -13,7 +13,7 @@ public class Seagull : MonoBehaviour {
 
 	//If we collide with the player, game over
 	void OnTriggerEnter(Collider other) {
-		if (other.tag.Equals ("player")) {
+		if (other.tag.Equals ("Player")) {
 			SceneManager.LoadScene (0);
 		}
 	}
