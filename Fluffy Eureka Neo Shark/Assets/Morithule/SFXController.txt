@@ -1,0 +1,5 @@
+1. Import Package
+2. Pull SFXController prefab into your project
+3. Add sounds to script
+4. Update enum with sound names (optional)
+5. Call SFXController.instance.PlaySound(enum value or index value)
