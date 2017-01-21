@@ -1,1 +1,5 @@
 Fluffy Eureka Neo Shark/Library/
+*.csproj
+*.userprefs
+*.sln
+Fluffy Eureka Neo Shark/Temp/
