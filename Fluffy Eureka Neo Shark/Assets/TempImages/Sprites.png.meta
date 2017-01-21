@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 7e11d67ca68a25f4f8e9490443aa911d
-timeCreated: 1485015561
+timeCreated: 1485016451
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -9,6 +9,8 @@ TextureImporter:
     21300004: Bird
     21300006: Shark_Surf
     21300008: Shark_Jump
+    21300010: Fish_Vertical
+    21300012: Fish_Angled
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -32,7 +34,7 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapMode: 1
@@ -134,6 +136,32 @@ TextureImporter:
         y: 883
         width: 41
         height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fish_Vertical
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 904
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fish_Angled
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 904
+        width: 17
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
