@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1000012765308144}
+  m_IsPrefabParent: 1
+--- !u!1 &1000012765308144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4000011791308632}
+  - component: {fileID: 114000013748177598}
+  m_Layer: 0
+  m_Name: SFXController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4000011791308632
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012765308144}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114000013748177598
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012765308144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8793896d4a9acf94292f1840bd172079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: a5972b6b4e2215549ba9394647fb5452, type: 3}
+  - {fileID: 8300000, guid: 3f76af676b434744db07218b8d3eaafb, type: 3}
+  - {fileID: 8300000, guid: 5b0d0debddafc474cafcfab120822010, type: 3}
+  - {fileID: 8300000, guid: 057439aa706b0b9449303a8dc1618d06, type: 3}
+  - {fileID: 8300000, guid: c7346f46c6210ff4883baa22a9e1e35d, type: 3}
+  - {fileID: 8300000, guid: be4451a7934e1da44ad3dea558386dbb, type: 3}
+  - {fileID: 8300000, guid: cb575e02b56771b48a0613712ddfb9cb, type: 3}
+  - {fileID: 8300000, guid: 1c1264e5e86b1374581cd97efa1559b3, type: 3}
+  - {fileID: 8300000, guid: f6cbbf499f4769f4c8baf99f219d856a, type: 3}
