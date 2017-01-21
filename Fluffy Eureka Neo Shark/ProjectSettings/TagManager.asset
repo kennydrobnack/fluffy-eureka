@@ -9,6 +9,7 @@ TagManager:
   - Score
   - Spawners
   - Wave
+  - Fish
   layers:
   - Default
   - TransparentFX

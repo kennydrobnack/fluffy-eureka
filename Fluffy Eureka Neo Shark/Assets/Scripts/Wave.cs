@@ -35,7 +35,7 @@ public class Wave : MonoBehaviour {
 		for (int i = 0; i < points.Length; i++) {
 			float y = amplitude*Mathf.Sin (2f*Mathf.PI*wavelength*(points [i].x - frequency*Time.timeSinceLevelLoad));
 			points [i].y = y;
-			lr.SetPosition (i, new Vector3(transform.position.x + points[i].x, y));
+			lr.SetPosition (i, new Vector3(transform.position.x + points[i].x, transform.position.y + y));
 		}
 		col.points = points;
 
