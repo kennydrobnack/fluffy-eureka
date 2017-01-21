@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114431883107148938}
   - component: {fileID: 114809786603055282}
   - component: {fileID: 114935992086054792}
+  - component: {fileID: 95974812066878920}
   m_Layer: 0
   m_Name: Seagull
   m_TagString: Seagull
@@ -80,6 +81,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.29
+--- !u!95 &95974812066878920
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1370460885090028}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 616eb77313c786c4ebc3f525d27ef177, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114111174675810458
 MonoBehaviour:
   m_ObjectHideFlags: 1
