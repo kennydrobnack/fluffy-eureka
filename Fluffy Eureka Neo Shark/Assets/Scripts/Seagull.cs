@@ -10,6 +10,9 @@ public class Seagull : MonoBehaviour {
 	//Adds extra space around the camera bounds before the object is destroyed
 	public float margin = 2f;
 
+	private Rigidbody2D rb;
+	private SpriteRenderer sprite;
+
 
 	//If we collide with the player, game over
 	void OnTriggerEnter(Collider other) {
@@ -20,8 +23,16 @@ public class Seagull : MonoBehaviour {
 
 	//Orient the sprite based on X velocity
 	void Start() {
-		Rigidbody2D rb = GetComponent<Rigidbody2D> ();
-		SpriteRenderer sprite = GetComponent<SpriteRenderer> ();
+		rb = GetComponent<Rigidbody2D> ();
+		sprite = GetComponent<SpriteRenderer> ();
+		if (rb.velocity.x < 0)
+			sprite.flipX = true;
+	}
+	void Update(){
+		FlipSprite ();
+	}
+
+	private void FlipSprite() {
 		if (rb.velocity.x < 0)
 			sprite.flipX = true;
 	}
