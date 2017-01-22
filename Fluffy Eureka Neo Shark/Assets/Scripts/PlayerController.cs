@@ -7,6 +7,9 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool canJump = false;
+	public float acceleration = 15f;
+	public float maxVel = 15f;
+	public float jump = 20f;
     // Use this for initialization
     void Start()
     {
@@ -22,17 +25,20 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetAxis("Horizontal") != 0)
         {
-            Vector3 currPos = transform.position;
-            currPos.x += Input.GetAxis("Horizontal") / 5f;
-            transform.position = currPos;
+			Vector2 dir = new Vector2 (Input.GetAxis ("Horizontal") * rb.mass*acceleration, 0);
+			rb.AddForce (dir, ForceMode2D.Force);
         }
+		
 
-        Debug.Log(Input.GetAxis("Jump"));
         if (canJump && Input.GetAxis("Jump") > 0)
         {
-            rb.velocity = new Vector3(rb.velocity.x, 10f, 0);
+            rb.velocity = new Vector3(rb.velocity.x, jump, 0);
             canJump = false;
         }
+
+		if (rb.velocity.x > maxVel) {
+			rb.velocity = new Vector2 (Mathf.Sign(rb.velocity.x)*maxVel, rb.velocity.y);
+		}
 
     }
 
