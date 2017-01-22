@@ -637,9 +637,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distScale: 2
   lockX: 0
-  lockY: 0
+  lockY: 1
   lockZ: 1
-  maxDist: 4
+  maxDist: 1
 --- !u!81 &469830267
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1048,8 +1048,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveSpawner: {fileID: 151998913}
-  speedMultMax: 10
-  speedMultMin: 3
+  speedMultMax: 3
+  speedMultMin: 1
 --- !u!50 &558708715
 Rigidbody2D:
   serializedVersion: 4
@@ -2599,8 +2599,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveSpawner: {fileID: 151998913}
-  speedMultMax: 10
-  speedMultMin: 3
+  speedMultMax: 3
+  speedMultMin: 1
 --- !u!50 &1475417517
 Rigidbody2D:
   serializedVersion: 4
@@ -3227,7 +3227,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e655b199a2a8a394e9865c22c8e3f938, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
