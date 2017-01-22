@@ -7,6 +7,12 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool isGrounded = false;
+    [SerializeField]
+    private float acceleration = 15f;
+    [SerializeField]
+    private float maxVel = 15f;
+    [SerializeField]
+    private float jump = 20f;
     // Use this for initialization
     void Start()
     {
@@ -21,18 +27,20 @@ public class PlayerController : MonoBehaviour
 
 
         if (Input.GetAxis("Horizontal") != 0)
-        { 
-                Vector3 currPos = transform.position;
-                currPos.x += Input.GetAxis("Horizontal") / 5f;
-                transform.position = currPos;
+        {
+            //Vector3 currPos = transform.position;
+            //currPos.x += Input.GetAxis("Horizontal") / 5f;
+            //transform.position = currPos;
+            Vector2 dir = new Vector2(Input.GetAxis("Horizontal") * rb.mass * acceleration, 0);
+            rb.AddForce(dir, ForceMode2D.Force);
         }
+
 
         if (isGrounded && Input.GetAxis("Jump") > 0)
         {
             SFXController.Instance.PlaySound(SoundEffect.Splash02);
             Vector3 newVelocity = rb.velocity;
-            newVelocity.y = 50f;
-            rb.velocity = newVelocity;
+            rb.velocity = new Vector3(rb.velocity.x, jump, 0);
             isGrounded = false;
         }
 
