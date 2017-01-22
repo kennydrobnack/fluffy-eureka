@@ -11,6 +11,7 @@ public class Seagull : MonoBehaviour {
 	//If we collide with the player, game over
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag.Equals ("Player")) {
+			Monetizr.Instance.ShowProductWithID ("9920046026");
 			SceneManager.LoadScene (0);
 		}
 	}
