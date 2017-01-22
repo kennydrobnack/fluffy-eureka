@@ -22,6 +22,7 @@ public class FireLaser : MonoBehaviour {
             Destroy(beam, 1f);
             canFire = false;
             fireTimer = .5f;
+            SFXController.Instance.PlaySound(SoundEffect.Pew);
         }
 
         if(!canFire)
