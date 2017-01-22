@@ -26,15 +26,19 @@ public class PlayerController : MonoBehaviour
     {
 
 
-		if (Input.GetAxis("Horizontal") != 0 )
-        {
-			Vector2 dir = new Vector2 (Input.GetAxis ("Horizontal") * rb.mass*acceleration, 0);
-			if(Mathf.Abs(rb.velocity.x) < maxVel || dir.x*rb.velocity.x < 0)
+		if (Input.GetAxis ("Horizontal") != 0) {
+			Vector2 dir = new Vector2 (Input.GetAxis ("Horizontal") * rb.mass * acceleration, 0);
+			if (Mathf.Abs (rb.velocity.x) < maxVel || dir.x * rb.velocity.x < 0)
 				rb.AddForce (dir, ForceMode2D.Force);
-        }
+		} else if (Input.acceleration.x != 0) {
+			Vector2 dir = new Vector2 (Input.acceleration.x * rb.mass * acceleration, 0);
+			if (Mathf.Abs (rb.velocity.x) < maxVel || dir.x * rb.velocity.x < 0)
+				rb.AddForce (dir, ForceMode2D.Force);
+		}
 
 
-        if (isGrounded && Input.GetAxis("Jump") > 0)
+
+		if (isGrounded && (Input.GetAxis("Jump") > 0 || Input.touchCount > 0) )
         {
             SFXController.Instance.PlaySound(SoundEffect.Splash02);
             Vector3 newVelocity = rb.velocity;
