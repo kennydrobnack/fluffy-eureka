@@ -2,10 +2,11 @@
 
 public class MoveWave : MonoBehaviour {
 
+	public float speed = 5f;
     void FixedUpdate()
     {
         Vector3 currPos = transform.position;
-        currPos.x += GameProperties.instance.GameSpeed * Time.deltaTime * .2f;
+        currPos.x += speed * Time.deltaTime;
         transform.position = currPos;
     }
 }

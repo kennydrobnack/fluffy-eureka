@@ -7,6 +7,13 @@ public class WaveCollector : MonoBehaviour
 
     [SerializeField]
     private Transform waveSpawner;
+	private PlayerController player;
+	public float speedMultMax = 1f;
+	public float speedMultMin = 1f;
+
+	void Start() {
+		player = GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerController> ();
+	}
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,7 +22,9 @@ public class WaveCollector : MonoBehaviour
             Vector3 newPos = collision.transform.position;
             newPos.x = waveSpawner.position.x;
             collision.transform.position = newPos;
-            //collision.transform.localScale = new Vector3(Random.Range(20f, 40f), Random.Range(20f, 40f), 1);
+			MoveWave w = collision.GetComponent<MoveWave> ();
+			float localSpeedMult = Random.Range (speedMultMin, speedMultMax);
+			w.speed = localSpeedMult*Mathf.Abs (player.maxVel);
         }
     }
 }

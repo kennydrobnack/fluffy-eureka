@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float acceleration = 15f;
     [SerializeField]
-    private float maxVel = 15f;
+    public float maxVel = 15f;
     [SerializeField]
     private float jump = 20f;
     // Use this for initialization
@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     {
 
 
-        if (Input.GetAxis("Horizontal") != 0)
+		if (Input.GetAxis("Horizontal") != 0 )
         {
 			Vector2 dir = new Vector2 (Input.GetAxis ("Horizontal") * rb.mass*acceleration, 0);
 			rb.AddForce (dir, ForceMode2D.Force);
@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
             rb.velocity = newVelocity;
             isGrounded = false;
         }
-
+			
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
