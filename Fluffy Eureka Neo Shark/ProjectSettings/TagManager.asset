@@ -27,8 +27,8 @@ TagManager:
   - Waves
   - Bounds
   - Player
-  - 
-  - 
+  - Laser
+  - Badguy
   - 
   - 
   - 
@@ -52,6 +52,9 @@ TagManager:
     locked: 0
   - name: BackWaves
     uniqueID: 2625259603
+    locked: 0
+  - name: SurfWaves
+    uniqueID: 2917545433
     locked: 0
   - name: Shark
     uniqueID: 4152033281

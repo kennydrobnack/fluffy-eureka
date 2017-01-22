@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114907540867845690}
   - component: {fileID: 95739446514503878}
   - component: {fileID: 114184465015427046}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: GigaSeagull
   m_TagString: Seagull
   m_Icon: {fileID: 0}
@@ -109,6 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6a5c05c0eb69346bbff05ab5d965ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToLoad: 2
 --- !u!114 &114295111983700664
 MonoBehaviour:
   m_ObjectHideFlags: 1
