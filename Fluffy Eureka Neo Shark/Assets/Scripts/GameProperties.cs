@@ -1,11 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameProperties : MonoBehaviour {
 
     [SerializeField]
     private float _gameSpeed;
+    [SerializeField]
+    private Text scoreText, hiscoreText;
+
+    private int hiScore, score;
 
     public float GameSpeed {
         get
@@ -33,11 +38,29 @@ public class GameProperties : MonoBehaviour {
 
     void Start()
     {
-        
+        DisplayHiScore();
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    public void IncreaseScore(int value)
+    {
+        score += value;
+        scoreText.text = score.ToString();
+        SFXController.Instance.PlaySound(SoundEffect.Can);
+        SetHiScore();
+    }
+
+    private void SetHiScore()
+    {
+        if (score > hiScore)
+        {
+            PlayerPrefs.SetInt("hiscore", score);
+            DisplayHiScore();
+        }
+    }
+
+    private void DisplayHiScore ()
+    {
+        hiScore = PlayerPrefs.GetInt("hiscore");
+        hiscoreText.text = hiScore.ToString();
+    }
 }
