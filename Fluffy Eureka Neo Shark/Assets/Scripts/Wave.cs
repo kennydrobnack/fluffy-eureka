@@ -13,10 +13,15 @@ public class Wave : MonoBehaviour {
 	public float amplitude = .1f;
 	public float frequency = 2f;
 	public float wavelength = 1f;
+	public GameObject prefabWave;
 
+	private GameObject wave;
 	void Awake() {
 		col = GetComponent<EdgeCollider2D> ();
 		lr = GetComponent<LineRenderer> ();
+		wave = GameObject.Instantiate (prefabWave);
+		wave.transform.position = transform.position;
+
 	}
 	// Use this for initialization
 	void Start () {
@@ -33,13 +38,19 @@ public class Wave : MonoBehaviour {
 	void FixedUpdate () {
 		Vector2[] points = col.points;
 		for (int i = 0; i < points.Length; i++) {
-			float y = amplitude*Mathf.Sin (2f*Mathf.PI*wavelength*(points [i].x - frequency*Time.timeSinceLevelLoad));
+			float y = amplitude*Mathf.Sin (2f*Mathf.PI*wavelength*(transform.position.x+points [i].x - frequency*Time.timeSinceLevelLoad));
 			points [i].y = y;
 			lr.SetPosition (i, new Vector3(transform.position.x + points[i].x, transform.position.y + y));
 		}
 		col.points = points;
 
 
+	}
+
+	void Update() {
+		float xPos = transform.position.x + 2f * Mathf.PI * frequency * wavelength * Time.timeSinceLevelLoad;
+		wave.transform.position = new Vector3 (xPos, transform.position.y, transform.position.z);
+	
 	}
 
 	void OnDrawGizmos() {

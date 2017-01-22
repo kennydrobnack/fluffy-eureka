@@ -18,7 +18,6 @@ public class Spawn : MonoBehaviour {
 		if (timeTillSpawn <= 0) {
 			timeTillSpawn = Random.Range (0, timeBetweenSpawns);
 			GameObject obj = GameObject.Instantiate (prefab);
-			obj.transform.parent = transform;
 			obj.transform.position = transform.position;
 			Impulse i = obj.AddComponent<Impulse> ();
 			i.impulse = impulse;
