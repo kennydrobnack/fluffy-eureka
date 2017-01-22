@@ -6,6 +6,9 @@ public class PlayerController : MonoBehaviour
 {
 
     private Rigidbody2D rb;
+	public float acceleration = 15f;
+	public float maxVel = 15f;
+	public float jump = 20f;
     private bool isGrounded = false;
     // Use this for initialization
     void Start()
@@ -21,17 +24,16 @@ public class PlayerController : MonoBehaviour
 
 
         if (Input.GetAxis("Horizontal") != 0)
-        { 
-                Vector3 currPos = transform.position;
-                currPos.x += Input.GetAxis("Horizontal") / 5f;
-                transform.position = currPos;
+        {
+			Vector2 dir = new Vector2 (Input.GetAxis ("Horizontal") * rb.mass*acceleration, 0);
+			rb.AddForce (dir, ForceMode2D.Force);
         }
 
         if (isGrounded && Input.GetAxis("Jump") > 0)
         {
             SFXController.Instance.PlaySound(SoundEffect.Splash02);
             Vector3 newVelocity = rb.velocity;
-            newVelocity.y = 50f;
+            newVelocity.y = jump;
             rb.velocity = newVelocity;
             isGrounded = false;
         }
