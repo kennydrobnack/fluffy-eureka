@@ -9,6 +9,9 @@ public class BackgroundCollector : MonoBehaviour
     [SerializeField]
     private List<Transform> backgrounds = new List<Transform>();
 
+	[SerializeField]
+	public bool shiftRight = true;
+
     private Transform lastBg;
 
 
@@ -30,14 +33,21 @@ public class BackgroundCollector : MonoBehaviour
 
     private void SetLastBg()
     {
-        lastBg = backgrounds.OrderByDescending(x => x.position.x).FirstOrDefault();
+		if(shiftRight)
+        	lastBg = backgrounds.OrderByDescending(x => x.position.x).FirstOrDefault();
+		else
+			lastBg = backgrounds.OrderByDescending(x => -1*x.position.x).FirstOrDefault();
+		
     }
 
     private void MoveBG(Collider2D collision)
     {
         float bgWidth = lastBg.GetComponent<BoxCollider2D>().bounds.size.x;
         Vector3 newX = collision.transform.position;
-        newX.x = lastBg.position.x + bgWidth;
+		if (shiftRight)
+			newX.x = lastBg.position.x + bgWidth;
+		else
+			newX.x = lastBg.position.x - bgWidth;
         collision.transform.position = newX;
     }
 }
