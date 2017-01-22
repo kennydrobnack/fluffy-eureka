@@ -109,6 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6a5c05c0eb69346bbff05ab5d965ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToLoad: 2
 --- !u!114 &114295111983700664
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c180c638270ffa459482e958759db47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  margin: 10
+  margin: 20
 --- !u!114 &114827974992565508
 MonoBehaviour:
   m_ObjectHideFlags: 1

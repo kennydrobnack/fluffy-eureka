@@ -522,6 +522,7 @@ GameObject:
   - component: {fileID: 469830272}
   - component: {fileID: 469830273}
   - component: {fileID: 469830274}
+  - component: {fileID: 469830275}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -645,7 +646,7 @@ MonoBehaviour:
   min_y_pos: 0
   max_y_pos: 0
   minSpawnRateInSeconds: 1
-  maxSpawnRateInSeconds: 5
+  maxSpawnRateInSeconds: 3
   sfx: 14
 --- !u!114 &469830272
 MonoBehaviour:
@@ -712,13 +713,37 @@ MonoBehaviour:
   max_x_impulse: 8
   min_y_impulse: 0
   max_y_impulse: 0
-  min_x_pos: 1
-  max_x_pos: 1
+  min_x_pos: 1.5
+  max_x_pos: 1.5
   min_y_pos: 0.5
   max_y_pos: 1
   minSpawnRateInSeconds: 20
   maxSpawnRateInSeconds: 30
   sfx: 6
+--- !u!114 &469830275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 469830264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e367730676d9b2a418ffe88a9ebc7ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1812392300600160, guid: b3cc7834746d5d44c8312509b4ebc22e, type: 2}
+  firstSpawnSeconds: 5
+  min_x_impulse: 3
+  max_x_impulse: 10
+  min_y_impulse: 8
+  max_y_impulse: 15
+  min_x_pos: 0
+  max_x_pos: 1
+  min_y_pos: 0
+  max_y_pos: 0
+  minSpawnRateInSeconds: 1
+  maxSpawnRateInSeconds: 3
+  sfx: 14
 --- !u!1 &495365508
 GameObject:
   m_ObjectHideFlags: 0
@@ -972,7 +997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveSpawner: {fileID: 151998913}
-  speedMultMax: 3
+  speedMultMax: 2
   speedMultMin: 1
 --- !u!50 &558708715
 Rigidbody2D:
@@ -2369,7 +2394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveSpawner: {fileID: 151998913}
-  speedMultMax: 3
+  speedMultMax: 2
   speedMultMin: 1
 --- !u!50 &1475417517
 Rigidbody2D:
