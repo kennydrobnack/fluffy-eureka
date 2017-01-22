@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114809786603055282}
   - component: {fileID: 114935992086054792}
   - component: {fileID: 95974812066878920}
+  - component: {fileID: 114975402694810542}
   m_Layer: 0
   m_Name: Seagull
   m_TagString: Seagull
@@ -134,6 +135,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flipX: 1
   flipY: 1
+--- !u!114 &114975402694810542
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1370460885090028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df6a5c05c0eb69346bbff05ab5d965ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212318481662050894
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -163,7 +175,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -647548231
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300008, guid: 494fcb50f4a8f5a45aec7eefadecb381, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -19,8 +19,8 @@ public class Wave : MonoBehaviour {
 	void Awake() {
 		col = GetComponent<EdgeCollider2D> ();
 		lr = GetComponent<LineRenderer> ();
-		wave = GameObject.Instantiate (prefabWave);
-		wave.transform.position = transform.position;
+		//wave = GameObject.Instantiate (prefabWave);
+		//wave.transform.position = transform.position;
 
 	}
 	// Use this for initialization
@@ -48,8 +48,8 @@ public class Wave : MonoBehaviour {
 	}
 
 	void Update() {
-		float xPos = transform.position.x + 2f * Mathf.PI * frequency * wavelength * Time.timeSinceLevelLoad;
-		wave.transform.position = new Vector3 (xPos, transform.position.y, transform.position.z);
+		//float xPos = transform.position.x + 2f * Mathf.PI * frequency * wavelength * Time.timeSinceLevelLoad;
+		//wave.transform.position = new Vector3 (xPos, transform.position.y, transform.position.z);
 	
 	}
 
