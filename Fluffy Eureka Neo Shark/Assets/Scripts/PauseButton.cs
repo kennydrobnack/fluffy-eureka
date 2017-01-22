@@ -5,13 +5,17 @@ using UnityEngine;
 public class PauseButton : MonoBehaviour {
 
 	public void Pause(){
-		SetTimeScale (0f); 
+        SFXController.Instance.PlaySound(SoundEffect.PawsButton);
+        SFXController.Instance.PauseBGMusic();
+        SetTimeScale (0f); 
 	}
 	public void UnPause(){
-		SetTimeScale (1f);
+        SFXController.Instance.UnPauseBGMusic();
+        SetTimeScale (1f);
 	}
 
 	public void SetTimeScale(float scale) {
+        
 		Time.timeScale = scale;
 	}
 }

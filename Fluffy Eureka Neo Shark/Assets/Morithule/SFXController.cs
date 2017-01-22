@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public enum SoundEffect { Boom };
+public enum SoundEffect { Can, CatDemon, CatScream, Ding, JetPack, Seagull, GigaSeagull, LongDing, PawsButton, Pew, Pop, Pop2, Splash01, Splash02, Sploosh };
 
 public class SFXController : MonoBehaviour
 {
@@ -12,6 +12,8 @@ public class SFXController : MonoBehaviour
     private AudioClip bgMusic;
     [SerializeField]
     private bool defaultSFXOn = true;
+    [Range(0.0f, 1.0f)]
+    public float BackgroundVolume = .25f;
 
     private bool _SFXOn;
 
@@ -56,6 +58,7 @@ public class SFXController : MonoBehaviour
         bgMusicSrc = gameObject.AddComponent<AudioSource>();
         bgMusicSrc.clip = bgMusic;
         bgMusicSrc.loop = true;
+        bgMusicSrc.volume = BackgroundVolume;
         if (_SFXOn)
         {
             bgMusicSrc.Play();
@@ -72,7 +75,8 @@ public class SFXController : MonoBehaviour
     {
         if (_SFXOn)
         {
-            audioSources[sound].Play();
+            if (!audioSources[sound].isPlaying)
+            { audioSources[sound].Play(); }
         }
     }
 
@@ -99,6 +103,16 @@ public class SFXController : MonoBehaviour
     public void StartBGMusic()
     {
         bgMusicSrc.Play();
+    }
+
+    public void PauseBGMusic()
+    {
+        bgMusicSrc.Pause();
+    }
+
+    public void UnPauseBGMusic()
+    {
+        bgMusicSrc.UnPause();
     }
 
 }
