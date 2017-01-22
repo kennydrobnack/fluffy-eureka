@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
 		if (Input.GetAxis("Horizontal") != 0 )
         {
 			Vector2 dir = new Vector2 (Input.GetAxis ("Horizontal") * rb.mass*acceleration, 0);
-			if(rb.velocity.x < maxVel || dir.x*rb.velocity.x < 0)
+			if(Mathf.Abs(rb.velocity.x) < maxVel || dir.x*rb.velocity.x < 0)
 				rb.AddForce (dir, ForceMode2D.Force);
         }
 
