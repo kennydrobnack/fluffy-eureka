@@ -593,6 +593,7 @@ GameObject:
   - component: {fileID: 469830271}
   - component: {fileID: 469830272}
   - component: {fileID: 469830273}
+  - component: {fileID: 469830274}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -714,6 +715,7 @@ MonoBehaviour:
   max_y_pos: 0
   minSpawnRateInSeconds: 1
   maxSpawnRateInSeconds: 5
+  sfx: 14
 --- !u!114 &469830272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -737,6 +739,7 @@ MonoBehaviour:
   max_y_pos: 1
   minSpawnRateInSeconds: 3
   maxSpawnRateInSeconds: 9
+  sfx: 5
 --- !u!114 &469830273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -760,6 +763,31 @@ MonoBehaviour:
   max_y_pos: 1
   minSpawnRateInSeconds: 3
   maxSpawnRateInSeconds: 9
+  sfx: 5
+--- !u!114 &469830274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 469830264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e367730676d9b2a418ffe88a9ebc7ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1973911978472564, guid: 7faaa80aee4e73a4fa49f9523ea0daff, type: 2}
+  firstSpawnSeconds: 20
+  min_x_impulse: 3
+  max_x_impulse: 8
+  min_y_impulse: 0
+  max_y_impulse: 0
+  min_x_pos: 1
+  max_x_pos: 1
+  min_y_pos: 0.5
+  max_y_pos: 1
+  minSpawnRateInSeconds: 20
+  maxSpawnRateInSeconds: 30
+  sfx: 6
 --- !u!1 &495365508
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,6 +951,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f825d3de2f0c2ed469ce841fc234e78c, type: 3}
   bgMusic: {fileID: 8300000, guid: f192cc4429df3e94cb0486ae5862b6a0, type: 3}
   defaultSFXOn: 1
+  playBGOnAwake: 1
   BackgroundVolume: 0.25
 --- !u!1001 &558371809
 Prefab:
