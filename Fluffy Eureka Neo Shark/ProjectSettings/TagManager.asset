@@ -53,9 +53,6 @@ TagManager:
   - name: BackWaves
     uniqueID: 2625259603
     locked: 0
-  - name: SurfWaves
-    uniqueID: 2917545433
-    locked: 0
   - name: Shark
     uniqueID: 4152033281
     locked: 0
@@ -64,6 +61,9 @@ TagManager:
     locked: 0
   - name: Cat
     uniqueID: 4257405771
+    locked: 0
+  - name: SurfWaves
+    uniqueID: 2917545433
     locked: 0
   - name: Wave
     uniqueID: 3597809449
