@@ -6,10 +6,7 @@ public class PlayerController : MonoBehaviour
 {
 
     private Rigidbody2D rb;
-    private bool canJump = false;
-	public float acceleration = 15f;
-	public float maxVel = 15f;
-	public float jump = 20f;
+    private bool isGrounded = false;
     // Use this for initialization
     void Start()
     {
@@ -24,21 +21,20 @@ public class PlayerController : MonoBehaviour
 
 
         if (Input.GetAxis("Horizontal") != 0)
-        {
-			Vector2 dir = new Vector2 (Input.GetAxis ("Horizontal") * rb.mass*acceleration, 0);
-			rb.AddForce (dir, ForceMode2D.Force);
-        }
-		
-
-        if (canJump && Input.GetAxis("Jump") > 0)
-        {
-            rb.velocity = new Vector3(rb.velocity.x, jump, 0);
-            canJump = false;
+        { 
+                Vector3 currPos = transform.position;
+                currPos.x += Input.GetAxis("Horizontal") / 5f;
+                transform.position = currPos;
         }
 
-		if (rb.velocity.x > maxVel) {
-			rb.velocity = new Vector2 (Mathf.Sign(rb.velocity.x)*maxVel, rb.velocity.y);
-		}
+        if (isGrounded && Input.GetAxis("Jump") > 0)
+        {
+            SFXController.Instance.PlaySound(SoundEffect.Splash02);
+            Vector3 newVelocity = rb.velocity;
+            newVelocity.y = 50f;
+            rb.velocity = newVelocity;
+            isGrounded = false;
+        }
 
     }
 
@@ -46,7 +42,8 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("wave", System.StringComparison.CurrentCultureIgnoreCase))
         {
-            canJump = true;
+            SFXController.Instance.PlaySound(SoundEffect.Splash01);
+            isGrounded = true;
         }
     }
 
@@ -54,7 +51,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("wave", System.StringComparison.CurrentCultureIgnoreCase))
         {
-            canJump = false;
+            isGrounded = false;
         }
 
     }
@@ -63,7 +60,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("wave", System.StringComparison.CurrentCultureIgnoreCase))
         {
-            canJump = true;
+            isGrounded = true;
         }
     }
 }
