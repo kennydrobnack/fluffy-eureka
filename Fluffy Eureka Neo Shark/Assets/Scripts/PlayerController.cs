@@ -6,10 +6,13 @@ public class PlayerController : MonoBehaviour
 {
 
     private Rigidbody2D rb;
-	public float acceleration = 15f;
-	public float maxVel = 15f;
-	public float jump = 20f;
     private bool isGrounded = false;
+    [SerializeField]
+    private float acceleration = 15f;
+    [SerializeField]
+    private float maxVel = 15f;
+    [SerializeField]
+    private float jump = 20f;
     // Use this for initialization
     void Start()
     {
@@ -28,6 +31,7 @@ public class PlayerController : MonoBehaviour
 			Vector2 dir = new Vector2 (Input.GetAxis ("Horizontal") * rb.mass*acceleration, 0);
 			rb.AddForce (dir, ForceMode2D.Force);
         }
+
 
         if (isGrounded && Input.GetAxis("Jump") > 0)
         {
