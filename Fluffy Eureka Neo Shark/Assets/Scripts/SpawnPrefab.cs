@@ -19,6 +19,8 @@ public class SpawnPrefab : MonoBehaviour {
     public float minSpawnRateInSeconds;
     public float maxSpawnRateInSeconds;
 
+    public SoundEffect sfx = SoundEffect.Sploosh;
+
     // Use this for initialization
     void Start()
     {
@@ -47,6 +49,7 @@ public class SpawnPrefab : MonoBehaviour {
         Vector2 impulse = new Vector2(x_impulse, y_impulse);
         Impulse i = aThing.AddComponent<Impulse>();
         i.impulse = impulse;
+        SFXController.Instance.PlaySound(sfx);
         ScheduleNextPrefabSpawn();
     }
 

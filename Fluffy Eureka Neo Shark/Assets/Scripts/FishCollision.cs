@@ -31,5 +31,6 @@ public class FishCollision : MonoBehaviour {
 		int.TryParse (text.text, out scoreValue);
 		scoreValue += value;
 		text.text = scoreValue.ToString();
+        SFXController.Instance.PlaySound(SoundEffect.Can);
 	}
 }

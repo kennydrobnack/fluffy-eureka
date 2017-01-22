@@ -105,6 +105,7 @@
     <Compile Include="Assets\Scripts\TestJump.cs" />
     <Compile Include="Assets\Scripts\Wave.cs" />
     <Compile Include="Assets\Scripts\WaveCollector.cs" />
+    <Compile Include="Assets\Scripts\moveBG.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Morithule\SFXController.txt" />

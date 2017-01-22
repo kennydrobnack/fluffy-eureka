@@ -12,6 +12,8 @@ public class SFXController : MonoBehaviour
     private AudioClip bgMusic;
     [SerializeField]
     private bool defaultSFXOn = true;
+    [SerializeField]
+    private bool playBGOnAwake = true;
     [Range(0.0f, 1.0f)]
     public float BackgroundVolume = .25f;
 
@@ -59,7 +61,8 @@ public class SFXController : MonoBehaviour
         bgMusicSrc.clip = bgMusic;
         bgMusicSrc.loop = true;
         bgMusicSrc.volume = BackgroundVolume;
-        if (_SFXOn)
+
+        if (_SFXOn && playBGOnAwake)
         {
             bgMusicSrc.Play();
         }

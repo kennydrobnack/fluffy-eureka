@@ -9,17 +9,17 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1544779538519636}
+  m_RootGameObject: {fileID: 1130519508094658}
   m_IsPrefabParent: 1
---- !u!1 &1544779538519636
+--- !u!1 &1130519508094658
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4478344376389020}
-  - component: {fileID: 114405769521880766}
+  - component: {fileID: 4882182599009528}
+  - component: {fileID: 114202036257054002}
   m_Layer: 0
   m_Name: SFXController
   m_TagString: Untagged
@@ -27,12 +27,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4478344376389020
+--- !u!4 &4882182599009528
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1544779538519636}
+  m_GameObject: {fileID: 1130519508094658}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,18 +40,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114405769521880766
+--- !u!114 &114202036257054002
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1544779538519636}
+  m_GameObject: {fileID: 1130519508094658}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8793896d4a9acf94292f1840bd172079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioClips:
-  - {fileID: 8300000, guid: 5b5c210608acb9a408be3bd41eda773e, type: 3}
+  - {fileID: 8300000, guid: 546148d854d6be4408a9efa0cc67844f, type: 3}
+  - {fileID: 8300000, guid: 96b7c4862d05f2b439b467d858151e2c, type: 3}
+  - {fileID: 8300000, guid: ee70ccfa987c68f4fa38f1cf972d90b6, type: 3}
+  - {fileID: 8300000, guid: 5bad4acf97e0a364ca422e61d5a8b9d2, type: 3}
+  - {fileID: 8300000, guid: e50c9af4e2590204eac1c01dc3fbbc73, type: 3}
+  - {fileID: 8300000, guid: b2173119be4971e4195414fe1db203b3, type: 3}
+  - {fileID: 8300000, guid: 3f9ed91d4b783314580c46c8325067c7, type: 3}
+  - {fileID: 8300000, guid: 2c21f2b86b62b274c8cabc1f665d1f4d, type: 3}
+  - {fileID: 8300000, guid: 364987e18695e8144b09b9b8c6458c86, type: 3}
+  - {fileID: 8300000, guid: 29aeff721172cf048a90614de07c594c, type: 3}
+  - {fileID: 8300000, guid: 3d799fa18a184c24f80b0c5fb1cd4fe1, type: 3}
+  - {fileID: 8300000, guid: 1e08a004385bef7458f5e2cb24c6db49, type: 3}
+  - {fileID: 8300000, guid: 9571a8a446f448447adc9d69fc5abe4f, type: 3}
+  - {fileID: 8300000, guid: 77d7a8606a0ec68489e2a67ddf834e43, type: 3}
+  - {fileID: 8300000, guid: f825d3de2f0c2ed469ce841fc234e78c, type: 3}
   bgMusic: {fileID: 8300000, guid: f192cc4429df3e94cb0486ae5862b6a0, type: 3}
   defaultSFXOn: 1
+  BackgroundVolume: 0.25

@@ -12,8 +12,10 @@ public class FishSpawner : MonoBehaviour {
 
     public float maxSpawnRateInSeconds;
 
-	// Use this for initialization
-	void Start () {
+    public SoundEffect sfx = SoundEffect.Sploosh;
+    
+    // Use this for initialization
+    void Start () {
         Invoke("SpawnFish", 0.2f);
 	}
 	
@@ -38,6 +40,7 @@ public class FishSpawner : MonoBehaviour {
         Vector2 impulse = new Vector2(x_impulse, y_impulse);
         Impulse i = aFish.AddComponent<Impulse>();
         i.impulse = impulse;
+        SFXController.Instance.PlaySound(sfx);
         ScheduleNextFishSpawn();
     }
 
