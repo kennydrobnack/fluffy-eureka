@@ -30,7 +30,7 @@ public class Seagull : MonoBehaviour {
 	}
 	void LoadLevel(){
 		if(Monetizr.Instance != null) 
-			Monetizr.Instance.ShowProductWithID ("9920046026");
+			Monetizr.Instance.ShowProductWithID ("9930040970");
 
 		SceneManager.LoadScene (0);
 	}
