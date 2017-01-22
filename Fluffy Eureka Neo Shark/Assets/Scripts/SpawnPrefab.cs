@@ -5,6 +5,9 @@ using UnityEngine;
 public class SpawnPrefab : MonoBehaviour {
 
     public GameObject prefab;
+
+    public Color gizmosColor;
+
     public float firstSpawnSeconds;
     public float min_x_impulse;
     public float max_x_impulse;
@@ -15,6 +18,8 @@ public class SpawnPrefab : MonoBehaviour {
     public float max_x_pos;
     public float min_y_pos;
     public float max_y_pos;
+
+    public bool spawnAtPoint;
 
     public float minSpawnRateInSeconds;
     public float maxSpawnRateInSeconds;
@@ -33,11 +38,27 @@ public class SpawnPrefab : MonoBehaviour {
 
     }
 
+    public void OnDrawGizmos()
+    {
+        Gizmos.color = gizmosColor;
+        Gizmos.DrawCube(transform.position, new Vector3(1f, 1f, 0.0f));
+        
+    }
+
     void SpawnNewPrefab()
     {
-
-        Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(min_x_pos, min_y_pos));
-        Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(max_x_pos, max_y_pos));
+        Vector2 min;
+        Vector2 max;
+        if (spawnAtPoint)
+        {
+            min = this.transform.position;
+            max = this.transform.position;
+        }
+        else
+        {
+            min = Camera.main.ViewportToWorldPoint(new Vector2(min_x_pos, min_y_pos));
+            max = Camera.main.ViewportToWorldPoint(new Vector2(max_x_pos, max_y_pos));
+        }
         GameObject aThing = (GameObject)Instantiate(prefab);
         aThing.transform.position = new Vector2(Random.Range(min.x, max.x), Random.Range(min.y, max.y));
         float x_impulse = Random.Range(min_x_impulse, max_x_impulse);
