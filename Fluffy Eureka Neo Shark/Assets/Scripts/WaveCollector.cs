@@ -9,7 +9,7 @@ public class WaveCollector : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("wave", System.StringComparison.CurrentCultureIgnoreCase))
         {
-            Destroy(collision);
+            Destroy(collision.gameObject);
         }
     }
 }
