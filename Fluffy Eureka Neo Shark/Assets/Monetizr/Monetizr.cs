@@ -12,10 +12,15 @@ using System.Runtime.InteropServices;
 
 public class Monetizr : MonoBehaviour {
 
-	[Tooltip("If you are using Apple Pay, fill in your Merchant ID here. Otherwise, leave blank. See documentation for additional steps in Xcode.")]public string ApplePayMerchantID;
-	[Tooltip("Your Channel ID, as provided by TheMonetizr")]public string ChannelID;
-	[Tooltip("The Shop Domain, as provided by TheMonetizr")]public string ShopDomain;
-	[Tooltip("Your API Key, as provided by TheMonetizr")]public string APIKey;
+	//[Tooltip("If you are using Apple Pay, fill in your Merchant ID here. Otherwise, leave blank. See documentation for additional steps in Xcode.")]public string ApplePayMerchantID;
+	//[Tooltip("Your Channel ID, as provided by TheMonetizr")]public string ChannelID;
+	//[Tooltip("The Shop Domain, as provided by TheMonetizr")]public string ShopDomain;
+	//[Tooltip("Your API Key, as provided by TheMonetizr")]public string APIKey;
+
+	public string ApplePayMerchantID = "";
+	public string ChannelID = "59979719";
+	public string ShopDomain = "shop.themonetizr.com";
+	public string APIKey = "e8a3223e639a4234e8ac25477307cbb8";
 
 	string[] plistArray;
 
@@ -67,12 +72,27 @@ public class Monetizr : MonoBehaviour {
 		if (!Application.isEditor)
 		{
 			#if UNITY_IOS
+
 			// call native iOS function
 			_ShowProductWithID(productID, plistArray.Length / 2, plistArray);
+			Debug.Log("TheMonetizr iOS");
+
+			#elif UNITY_ANDROID
+
+			Application.OpenURL("http://" + ShopDomain + "/products/" + productID);
+			Debug.Log("TheMonetizr Android");
+
+			#elif UNITY_WEBGL
+
+			Application.OpenURL("http://" + ShopDomain + "/products/" + productID);
+			Debug.Log("TheMonetizr WebGL");
+
 			#endif
 		} else {
-			// show fake message in editor
-			Debug.Log("Showing Product ID " + productID + " (NOT SUPPORTED IN EDITOR)");
+			// show message in editor
+			Debug.Log("Showing Product ID " + productID + " (NOT SHOWN IN EDITOR)");
+			// Use the following line to open product in editor:
+			Application.OpenURL("http://" + ShopDomain + "/products/" + productID);
 		}
 	}
 }

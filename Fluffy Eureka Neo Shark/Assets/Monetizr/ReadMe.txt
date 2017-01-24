@@ -21,7 +21,7 @@ Note: The required Shopify Mobile Buy SDK requires a minimum build target of iOS
 
 * To show the product page from code, call the function like this:
 
-Monetizr.Instance.ShowProductWithID("9359302538");
+Monetizr.Instance.ShowProductWithID("7155284231");
 
 * Setup and enable Apple Pay in your project (Optional)
 

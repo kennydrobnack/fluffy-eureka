@@ -52,6 +52,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ApplePayMerchantID: 
-  ChannelID: 3539393739373139
-  ShopDomain: 696e7374616772616d7072696e7465642e6d7973686f706966792e636f6d
-  APIKey: 6538613332323365363339613432333465386163323534373733303763626238
+  ChannelID: 59979719
+  ShopDomain: instagramprinted.myshopify.com
+  APIKey: e8a3223e639a4234e8ac25477307cbb8

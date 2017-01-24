@@ -345,18 +345,53 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 755174131}
+--- !u!1 &764834778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1000013407242610, guid: 065491184b2ed49d0bce70af7e92130b,
+    type: 2}
+  m_PrefabInternal: {fileID: 2121337479}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 764834779}
+  - component: {fileID: 1042583857}
+  m_Layer: 0
+  m_Name: TheMonetizr
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &764834779
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4000013570586026, guid: 065491184b2ed49d0bce70af7e92130b,
+    type: 2}
+  m_PrefabInternal: {fileID: 2121337479}
+  m_GameObject: {fileID: 764834778}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 621, y: 331.19995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1042583857
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 114000010348642490, guid: 065491184b2ed49d0bce70af7e92130b,
     type: 2}
   m_PrefabInternal: {fileID: 2121337479}
-  m_GameObject: {fileID: 1090235181}
+  m_GameObject: {fileID: 764834778}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0886e77148be4ee09a69668a455d6b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ApplePayMerchantID: 
+  ChannelID: 59979719
+  ShopDomain: instagramprinted.myshopify.com
+  APIKey: e8a3223e639a4234e8ac25477307cbb8
 --- !u!1 &1059780689
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,37 +453,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1090235181
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1000013407242610, guid: 065491184b2ed49d0bce70af7e92130b,
-    type: 2}
-  m_PrefabInternal: {fileID: 2121337479}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1090235182}
-  - component: {fileID: 1042583857}
-  m_Layer: 0
-  m_Name: TheMonetizr
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1090235182
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4000013570586026, guid: 065491184b2ed49d0bce70af7e92130b,
-    type: 2}
-  m_PrefabInternal: {fileID: 2121337479}
-  m_GameObject: {fileID: 1090235181}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 621, y: 331.19995, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1763656182
 GameObject:
@@ -613,5 +617,5 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 065491184b2ed49d0bce70af7e92130b, type: 2}
-  m_RootGameObject: {fileID: 1090235181}
+  m_RootGameObject: {fileID: 764834778}
   m_IsPrefabParent: 0
